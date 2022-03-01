@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ISHANI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ZCOOL KuaiLe">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px ; 
+  border-radius: 10px;
+  background: black ;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: cyan; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: pink; 
+}
+
+
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 60px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid green;
+  border-radius: 50%;
+  border-top: 16px ;
+  -webkit-animation:spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 3s;
+  animation-name: animatebottom;
+  animation-duration: 3s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glow {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+}
+
+
+.gloow {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes gloow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+}
+
+
+.glooow {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glooow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+}
+
+
+
+
+.caard {
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 10%;
+  border-radius: 5px;
+}
+
+.caard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.container {
+  padding: 2px 2px;
+  margin: auto;
+}
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+  font-size: 18px;
+}
+
+buton{
+    border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.5;
+}
+
+buton:hover, a:hover {
+  opacity: 0.5;
+}
+
+
+body, html {height: 100%}
+h1 {font-family: Satisfy}
+h4 {text-align: center;}
+h5,h6,h3,h4,h2 {font-family: Oswald}
+body,html {font-family: ZCOOL KuaiLe}
+
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.dribbble.com/users/2008861/screenshots/5769168/office-dialogue-dribs6.gif");
+  min-height: 100%;
+ height: 1000px;
+}
+.bgim {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("http://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max");
+  min-height: 90%;
+}
+.bgimage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://visme.co/blog/wp-content/uploads/2020/02/header-1200.gif");
+
+}
+.bgimag {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://i.pinimg.com/originals/3f/67/38/3f673892f9e889782aab0ce567c47c75.gif");
+  height: 900px;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #blue;
+}
+
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropup {
+  position: relative;
+  display: inline-block;
+}
+
+.dropup-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.dropup-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropup-content a:hover {background-color: #ccc}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+
+.dropup:hover .dropbtn {
+  background-color: #2980B9;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 10px;
+  height: 300px;
+  /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  
+  padding: 10px;
+}
+
+
+
+
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-xsmall glow">
+  <div class="w3-bar w3-xsmall w3-blue w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button" style="font-size:12px">HOME<hr></a>
+    <a href="#visit" class="w3-bar-item w3-button" style="font-size:12px">VISIT<hr></a>
+    <a href="#about" class="w3-bar-item w3-button" style="font-size:12px">ABOUT<hr></a>
+    <a href="#products" class="w3-bar-item w3-button" style="font-size:12px">PRODUCTS<hr></a>
+<a href="https://www.shopify.in/partners/blog/web-design-portfolio-inspiration" class="w3-bar-item w3-button" style="font-size:12px">Careers<hr></a>
+<a href="https://www.shopify.in/partners/blog/web-design-portfolio-inspiration" class="w3-bar-item w3-button" style="font-size:12px">Support<hr></a>
+<a href="https://www.shopify.in/partners/blog/web-design-portfolio-inspiration" class="w3-bar-item w3-button" style="font-size:12px">Us<hr></a>
+<a href="https://www.shopify.in/partners/blog/web-design-portfolio-inspiration" class="w3-bar-item w3-button" style="font-size:12px">Web Hosting<hr></a>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container " id="home">
+  <div class="w3-display-bottomright w3-padding">
+    <span class=" w3-xlarge glow">LEARNING SHOULD NEVER STOP</span>
+  </div><br><br><br>
+<div class=" w3-padding">
+    <span class=" glow style="font-size:2px" style="font-family:Monoton" ">DESIGN   </span>
+  </div>
+
+<div class=" w3-padding">
+    <span class=" gloow " style="font-size:25px" style="font-family:Monoton" ">BUILD   </span>
+  </div>
+<div class=" w3-padding">
+    <span class=" gloow style="font-size:25px" style="font-family:Monoton">ENHANCE </span>
+  </div>
+<div class=" w3-padding">
+    <span class=" glooow style="font-size:25px" style="font-family:Monoton">LAUNCH</span>
+  </div>
+  <div class="w3-center w3-padding">
+    <span class="glow" style="font-size:100px">'MY ' </span>
+<br>
+    <p class="w3-button w3-large  glow"><b>hello and welcome</b></p>
+  </div>
+</header>
+
+
+
+<hr>
+<h1>We believe in perfection by design and performance by default.</h1>
+<br>
+<hr>
+<header class="bgimag">
+<div class="content">
+<h4 >Hello World!!<br>   What it’s about: This beautifully minimal and easy to navigate portfolio is a feast for the eyes. A combination of minimal design together with vibrant colors creates an atmosphere of creativity, and engages visitors to spend more time on the site.Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste</h4>
+<h5 >  This is a full-service agency, busy designing and building beautiful digital products, brands, and experiences..</h5>
+<h5> Enjoy this site</h5>
+<br>
+
+<br>
+
+
+
+<h5 style="background-color:LightGray"><br><br> Tdolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Turning Your Paperball Into Paperplane.We create extraordinary digital items, that make people talking.Let me give you a short intro about myself. I’m a prolific digital marketer from India. I learned Digital Marketing from various online courses and attended events to gain knowledge. I am also a certified Digital Marketing Consultant from Digiperform.
+
+In my marketing journey, I have worked for a few companies and currently I am freelancing. My whole work journey revolves around three words which you will learn below. My main focus is to bring profit to both the business owner and customer.MY ' is hiring people. <br><br><br></h5>
+<h3>Design, Bulid, Enhance, Launch</h3>
+</div>
+</header>
+<br>
+<br>
+<hr>
+
+<h4><a href="" class="w3-button w3-xlarge w3-yellow ">Our Works</a></h4>
+
+
+<header class="bgim w3-display-container  w3-center" id="visit">
+<div class="w3-row">
+    <div class="w3-half w3-center ">
+ <a href="https://en.wikipedia.org/wiki/HTML">
+      <img src=" https://webandcrafts.com/blog/wp-content/uploads/2019/12/ux_ui-01-3.jpg" style="width:60%" >
+     <h1 style="color:white ">UX/UI • Web  </h1>
+<a href="https://en.wikipedia.org/wiki/CSS">
+      <img src="https://www.tatvasoft.com.au/blog/wp-content/uploads/2017/02/mobile-app-development-methodologies.jpg" style="width:60%">
+     <h1 style="color:white "> Mobile app development </h1>
+<a href="https://en.wikipedia.org/wiki/JAVA">
+      <img src="https://w1.pngwing.com/pngs/342/715/png-transparent-shopping-cart-icon-ecommerce-web-development-drupal-commerce-business-digital-marketing-company-service.png " style="width:60%">
+<h1 style="color:white "> E-Commerce </h1>
+<a href="https://en.wikipedia.org/wiki/JAVA">
+      <img src="https://miro.medium.com/max/1800/0*iyDtmEYHN4TswMB5.png " style="width:60%">
+<h1 style="color:white ">Interactive Websites</h1>
+<a href="https://en.wikipedia.org/wiki/JAVA">
+      <img src="https://cdn.dribbble.com/users/156577/screenshots/6500687/web_agency_homepage_design_4x.png?compress=1&resize=400x300 " style="width:60%">
+<h1 style="color:white ">Corporate websites</h1>
+<a href="https://en.wikipedia.org/wiki/JAVA">
+      <img src="https://www.dreamhost.com/academy/wp-content/uploads/2020/12/what-is-web-hosting-750x498.jpg " style="width:60%">
+<h1 style="color:white ">Web Hosting</h1>
+<a href="https://en.wikipedia.org/wiki/JAVA">
+      <img src="https://assets.website-files.com/5e469aaf314e562ff1146d3f/5feb0f4527cc9976b63dd88c_big-bang-mockup.png " style="width:60%">
+<h1 style="color:white ">Graphic Designing</h1>
+
+    </div>
+
+    <div class="w3-half w3-center">
+<a href="https://en.wikipedia.org/wiki/Javascript">
+      <img src="https://indylogix.com/wp-content/uploads/2020/10/hire-back-end-developer-indylogix-solutions.png" style="width:60%">
+<h1 style="color:white "> Backend Solutions </h1>
+<a href="https://en.wikipedia.org/wiki/PHP">
+      <img src="https://visme.co/blog/wp-content/uploads/2020/07/1.-Web-Development-Proposal-Template.jpg" style="width:60%">
+<h1 style="color:white "> Templates and Blogs</h1>
+<a href="https://en.wikipedia.org/wiki/Angular">
+<img src="http://www.hindsoft.com/images/seo.jpg" style="width:60%">
+<h1 style="color:white "> Search Engine Optimisation</h1>
+<a href="https://en.wikipedia.org/wiki/Angular">
+<img src="https://www.softhunters.in/assests/images/digital-marketing-images/design/logo-page/banner-logo-design.png" style="width:60%">
+<h1 style="color:white "> Logo Designing</h1>
+<a href="https://en.wikipedia.org/wiki/Angular">
+<img src="https://www.designhill.com/design-blog/wp-content/uploads/2014/06/blog-feature-min.jpg" style="width:60%">
+<h1 style="color:white "> Responsive Web Designing</h1>
+<a href="https://en.wikipedia.org/wiki/Angular">
+<img src="https://miro.medium.com/max/1800/0*iyDtmEYHN4TswMB5.png" style="width:60%">
+<h1 style="color:white "> Interactive Web Designing</h1>
+
+
+</div>
+  </div>
+</header>
+ 
+
+
+<hr>
+
+<div class="content ">
+<h4><a href="" class="w3-button w3-xlarge w3-black w3-center">The way you design a website has a huge impact on the viewers.</a></h4>
+<header class=" w3-display-container w3-center" id="visit">
+<div class="w3-row">
+    <div class="w3-half w3-center">
+      <img src="https://i.gifer.com/DXKh.gif" height="400" width=400" >
+
+    </div>
+
+    <div class="w3-half w3-center">
+
+ 
+ <h1 style="color:black w3-center ">Why Is Web Design Important?</h1>
+      <h3 style="color:black text-align:center;">If only given 15 minutes to consume content, 66 percent of people would prefer to see something beautifully designed versus something plain and simple. Your website’s design is an important part of your online marketing presence. To build a better website for your business, you must understand the importance of web design.</h3>
+<br>
+<br>
+<br>
+<br>
+<h3 style="color:black w3-center">As you look into redesigning your website, you may wonder the importance to website design. How does it impact your audience and your business? Let’s look at five reasons web design is important.</h3>
+</div>
+  </div>
+</header>
+</div>
+
+<header class=" w3-display-container  " id="visit">
+<div class="content bgimage animate-bottom">
+<div class="w3-row w3-padding-right-64 w3-padding-left-64">
+<div class="w3-half">
+<h1 style="color:black w3-padding-right-64" >1. It sets the first impression</h1>
+<h3 style="color:black w3-padding-right-64 w3-padding-left-64">When your audience visits your website, it gives them their first impression of your business. They will judge your business within seconds. In these first few seconds, you want to make a positive impact on your audience.</h3>
+<br>
+<h1 style="color:black w3-padding-right-64 w3-padding-left-64">2. It aids your search engine optimization (SEO) strategy</h1>
+<h3 style="color:black text-align:center;">Many web design elements and practices influence how you publish content on your website, which in turn affects how search engine spiders crawl and index your website.</h3>
+<br>
+<h1 style="color:black text-align:center;">3. Your competitors are doing it.</h1>
+<h3 style="color:black text-align:center;">If you need a reason for why web design is important, here’s a big one: Your competitors are already utilizing web design. If you want to remain in competition with them, you must use web design for your site.
+<br>
+You want your website to stand out from the competition. If you have an old, outdated, and low-quality website, your competitor’s will outrank you. Their well-designed website will perform better than your website.
+<br>
+This means you’ll lose leads to your competitors. They’ll attract more leads to their page because their page is more appealing.</h3>
+<br>
+<br>
+<h3 style="color:black "></h3>
+</div>
+<div class="w3-half">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ </div>
+</div>
+</div>
+</header>
+
+
+
+
+<header class=" w3-display-container " id="visit">
+<div class="w3-row">
+<div class=" bgimage animate-bottom">
+    <div class="w3-half">
+
+      <img src="https://www.webfx.com/web-design/img/html-code-small.png" >
+<br><br><br><br>
+<header class="content ">
+<img src="https://schoollyguide.com/assets/img/schoolly_services/web-development.gif" height="500" width="700" >
+</header>
+ 
+   </div>
+
+    <div class="w3-half">
+ <h1 style="color:black ">4.It creates consistency</h1>
+      <h3 style="color:black ">You need to have the same fonts, styles, and layouts across every page on your website. If you have a different design on every page, this will make your site look unprofessional. It also makes it more challenging to build brand recognition because your audience won’t know which colors to associate with your brand.</h3>
+<header class="content w3-center">
+<img src="https://i.pinimg.com/originals/f5/34/04/f5340454c0da1eabb125df9efff4b504.gif" />
+</header>
+<br>
+<br>
+<br>
+<br>
+<h3 style="color:black "></h3>
+</div>
+</div>
+  </div>
+</header>
+<hr><hr>
+
+<!-- Page content -->
+<div class="content padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="products">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">KIND OF WEBSITES WE MAKE</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Homepages</div>
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/matcha-kari.jpg?auto=format&q=60&fit=max&w=930" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Magazine websites</div>
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/urban-omnibus.jpg?auto=format&q=60&fit=max&w=930" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">E-Commerce</div>
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/flipkart.jpg?auto=format&q=60&fit=max&w=930" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Blogs</div>
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/nourish-eats.jpg?auto=format&q=60&fit=max&w=930" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Portfolio websites</div>
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/gautier-maillard.jpg?auto=format&q=60&fit=max&w=930" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Landing pages</div>
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/shopify.jpg?auto=format&q=60&fit=max&w=930" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Directory and contact pages</div>
+        <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/manta.jpg?auto=format&q=60&fit=max&w=930" alt="House" style="width:99%">
+      </div>
+    </div>
+  </div>
+
+
+<header class="content w3-center">
+
+<br><h1>Get started!! Learn building innovative and productive websites right here.<a href="https://99designs.com/web/get-started"><img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/blog-webonboarder-bottom-02.png?auto=format&q=60&fit=max&w=930" height="500" width="500"  ></a> </h1>
+<h5>Let’s find the right solution for your website needs.Answer a few short questions to help us get to know you better.</h5>
+<span  style="font-size:25px" style="font-family:Monoton" ">Click on the picture above.<br>  </span>
+
+
+</header>
+
+
+<header class="content w3-center">
+<img src="https://i.pinimg.com/originals/1b/30/03/1b30033fd3371590761931e060a02974.gif" height="500" width="500"  >
+<br><h1>Thanks for coming!! </h1>
+</header>
+
+<hr>
+<header  id="link">
+<div class="row" style="color:yellow;"  >
+  <div class="column" style="background-color:black">
+    <h2 style="align:center">Quick Links<br></h2>
+    <h4>
+<br>Home<br>
+About Us<br>
+Services<br>
+Hosting<br>
+Technology</h4>
+  </div>
+  <div class="column" style="background-color:black">
+    <h2>     Portfolio</h2>
+    <h4><br>
+Web Development<br>
+Mobile App Development<br>
+Web Designing<br>
+Branding<br>
+Animation</h4>
+  </div>
+  <div class="column" style="background-color:black">
+    <h2>Current Openings</h2>
+    <h4><br>
+Development (45+ Openings)<br>Design(10+ Openings)<br>Sales & Marketing(10+ Openings)<br>Testing(2+ Openings)<br>Others(8+ Openings)</h4>
+  </div>
+</div>
+</header>
+<hr><hr>
+
+
+
+<footer class="w3-teal w3-padding-60 w3-center" id="about" id="contact">
+  <h2>About Us</h2>
+
+      <h1>WE HOPE YOU ARE ALREADY IN LOVE WITH THIS. </h1>
+      <h4>'MY ' is a full-service agency, busy designing and building beautiful digital products, brands, and experiences. </h4>
+
+
+  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+<h6>Always trying our best.</h6>
+    <p class="w3-large w3-text-pink">Let's collab.</p>
+<div class="w3-section">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-section">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-section">
+      <label><b>Message</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+  </form>
+<div class="card">
+  
+  <h1 style="color:white ">ISHANI DEY</h1>
+  <p class="title" style="color:white ">CEO & Founder</p>
+  <p style="color:white ">IIT BBS</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-pinterest"></i></a>
+  </div>
+<h7 style="color:white ">Copyright © 2009- 2021 'MY ' All rights reserved.</h7>
+</div>
+
+</footer>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<div class="dropup">
+  <buton class="dropbtn w3-center">Dropup</buton>
+  <div class="dropup-content">
+    <a href="#">Find Out</a>
+    <a href="#">Find Out</a>
+    <a href="#">Find Out </a>
+  </div>
+</div>
+<div class="dropup">
+  <buton class="dropbtn">Dropup</buton>
+  <div class="dropup-content">
+    <a href="#">Find Out</a>
+    <a href="#">Find Out</a>
+    <a href="#">Find Out</a>
+  </div>
+</div>
+<div class="dropup">
+  <buton class="dropbtn">Dropup</buton>
+  <div class="dropup-content">
+    <a href="#">'MY '</a>
+    <a href="#">'MY '</a>
+    <a href="#">'MY '</a>
+  </div>
+</div>
+<div class="dropup">
+  <buton class="dropbtn">Dropup</buton>
+  <div class="dropup-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+
+</div>
+<hr><hr>
+<h3> View more works in the drop-up<br><br><br></h3>
+</div>
+</div>
+
+
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 7000 || document.documentElement.scrollTop > 7000) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+</body>
+</html>
